@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>警告：偽装ドメインの疑い</title>
+  <link rel="icon" href="icons/icon32.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    main { max-width: 640px; margin: 8vh auto; padding: 0 16px; }
+    h1 { font-size: 24px; margin: 0 0 8px; }
+    .big { font-size: 18px; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    details { margin-top: 24px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="high">⚠ このサイトは偽装ドメインの可能性があります</h1>
+    <p>見た目は本物そっくりでも、実際には別のドメインかもしれません。ログイン情報やカード番号を入力しないでください。</p>
+
+    <div class="label">表示されるドメイン</div>
+    <div id="unicode" class="mono big"></div>
+    <div class="label">実際のドメイン（punycode）</div>
+    <div id="ascii" class="mono big"></div>
+
+    <div class="label">検出理由</div>
+    <ul id="reasons"></ul>
+
+    <div class="buttons">
+      <button id="close" class="primary">このタブを閉じる</button>
+      <button id="once">今回だけ開く</button>
+      <button id="always">常に許可する</button>
+    </div>
+
+    <details>
+      <summary>開こうとしたURL</summary>
+      <div id="url" class="mono"></div>
+    </details>
+  </main>
+  <script type="module" src="warning.js"></script>
+</body>
+</html>

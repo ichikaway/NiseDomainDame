@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "NiseDomainDame",
+  "short_name": "NDD",
+  "version": "1.2.0",
+  "description": "Spot fake look-alike domains and stop homograph phishing./国際化ドメイン名をpunycodeで表示し、ホモグラフ攻撃の疑いがあるサイトを開く前に警告します。",
+  "permissions": ["tabs", "webNavigation", "storage"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "NiseDomainDame(NDD)",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  }
+}

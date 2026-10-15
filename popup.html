@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <style> body { width: 340px; padding: 12px; } #actions { margin-top: 12px; } </style>
+</head>
+<body>
+  <div id="status" class="status">確認中…</div>
+  <div class="label">punycode（実際のドメイン）</div>
+  <div id="ascii" class="mono">-</div>
+  <div id="unicodeWrap" hidden>
+    <div class="label">表示上のドメイン</div>
+    <div id="unicode" class="mono"></div>
+  </div>
+  <ul id="reasons"></ul>
+  <div id="actions" hidden><button id="toggle"></button></div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
